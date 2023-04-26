@@ -9,9 +9,13 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import { register } from "./controllers/auth.js";
+import { addPicture } from "./controllers/picture.js";
 import authRoutes from "./routes/auth.js";
 import pictureRoutes from "./routes/picture.js";
 import cartRoutes from "./routes/cart.js";
+import User from "./models/User.js";
+import Picture from "./models/Picture.js";
+import { pictures } from "./data/index.js";
 
 /*CONFIGURATIONS*/
 const __filename = fileURLToPath(import.meta.url);
@@ -44,7 +48,7 @@ const upload = multer({ storage });
 
 /* ROUTES WITH FILES*/
 app.post("/auth/register", upload.single("Picture"), register);
-app.post("/posts", upload.single("Picture"));
+app.post("/pictures/upload", upload.single("Picture"), addPicture);
 
 /*ROUTES*/
 app.use("/auth", authRoutes);
@@ -61,5 +65,10 @@ mongoose
   })
   .then(() => {
     app.listen(PORT, HOST, () => console.log(`Server Port: ${PORT}`));
+
+    /*ADD DATA ONE TIME*/
+
+    // User.insertMany(users);
+    // Picture.insertMany(pictures);
   })
   .catch((error) => console.log(`${error} did not connect`));

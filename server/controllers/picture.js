@@ -42,7 +42,7 @@ export const patchUniquePicture = async (req, res) => {
       { price: picture.price },
       { picturePath: picture.picturePath }
     );
-    res.send(200).json(updatedPicture);
+    res.status(200).json(updatedPicture);
   } catch (err) {
     res.status(404).json({ err: err.message });
   }

@@ -27,27 +27,27 @@ const userSchema = new mongoose.Schema(
     },
     city: {
       type: String,
-      required: true,
+      // required: true,
     },
     address: {
       type: String,
-      required: true,
+      // required: true,
     },
     zipCode: {
       type: String,
-      required: true,
+      // required: true,
     },
     phoneNumber: {
       type: Number,
-      required: true,
+      // required: true,
     },
     cardNumber: {
       type: Number,
-      required: true,
+      // required: true,
     },
     CVC: {
       type: Number,
-      required: true,
+      // required: true,
     },
     pictureId: {
       type: String,
