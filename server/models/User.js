@@ -20,11 +20,7 @@ const userSchema = new mongoose.Schema(
       max: 50,
       unique: true,
     },
-    password: {
-      type: String,
-      required: true,
-      min: 5,
-    },
+
     city: {
       type: String,
       // required: true,
@@ -38,19 +34,8 @@ const userSchema = new mongoose.Schema(
       // required: true,
     },
     phoneNumber: {
-      type: Number,
-      // required: true,
-    },
-    cardNumber: {
-      type: Number,
-      // required: true,
-    },
-    CVC: {
-      type: Number,
-      // required: true,
-    },
-    pictureId: {
       type: String,
+      // required: true,
     },
     subscription: {
       type: Map,

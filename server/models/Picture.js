@@ -22,10 +22,6 @@ const PictureSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    comments: {
-      type: Array,
-      default: [],
-    },
   },
   { timestamps: true }
 );
