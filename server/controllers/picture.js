@@ -1,5 +1,6 @@
 import Picture from "../models/Picture.js";
 import User from "../models/User.js";
+import Cart from "../models/Cart.js";
 
 /*READ*/
 
@@ -50,6 +51,21 @@ export const addPicture = async (req, res) => {
   }
 };
 
+export const addNewPicToCart = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const picture = await Picture.findById(id);
+
+    const cart = await Cart.find();
+
+    cart.items.push(picture);
+
+    res.status();
+  } catch (err) {
+    res.status(409).json({ err: err.message });
+  }
+};
+
 /*UPDATE*/
 
 //only by admin
@@ -64,6 +80,7 @@ export const patchUniquePicture = async (req, res) => {
       {
         title: req.body.title,
         story: req.body.story,
+        price: req.body.price,
         likes: req.body.likes,
         picturePath: req.body.picturePath,
       },

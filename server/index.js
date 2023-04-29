@@ -15,6 +15,7 @@ import pictureRoutes from "./routes/picture.js";
 import cartRoutes from "./routes/cart.js";
 import User from "./models/User.js";
 import Picture from "./models/Picture.js";
+import Cart from "./models/Cart.js";
 import { pictures } from "./data/index.js";
 
 /*CONFIGURATIONS*/
@@ -48,7 +49,7 @@ const upload = multer({ storage });
 
 /* ROUTES WITH FILES*/
 app.post("/auth/register", upload.single("Picture"), register);
-app.post("/pictures/upload", upload.single("Picture"), addPicture);
+app.post("/pictures", upload.single("Picture"), addPicture);
 
 /*ROUTES*/
 app.use("/auth", authRoutes);

@@ -8,9 +8,13 @@ const PictureSchema = new mongoose.Schema(
     story: {
       type: String,
     },
-    picturePath: {
+    image: {
       type: String,
       default: "",
+    },
+    price: {
+      type: String,
+      required: [true, "Please Include the product price"],
     },
     likes: {
       type: Number,

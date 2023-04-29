@@ -3,8 +3,8 @@ import {
   getPictures,
   patchUniquePicture,
   getUniquePicture,
+  addNewPicToCart,
   deletePicture,
-  addPicture,
 } from "../controllers/picture.js";
 
 const router = express.Router();
@@ -14,7 +14,10 @@ router.get("/", getPictures);
 router.get("/:id", getUniquePicture);
 
 /*CREATE*/
-router.post("/", addPicture);
+//addPicture was put in the index.js cause multer is there
+
+/*CREATE*/
+router.post("/:id", addNewPicToCart);
 
 /*DELETE*/
 router.delete("/:id", deletePicture);

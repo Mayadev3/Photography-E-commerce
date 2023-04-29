@@ -1,19 +1,15 @@
 import express from "express";
-import {
-  getCart,
-  quantityPictures,
-  addNewPicToCart,
-} from "../controllers/cart.js";
+import { getCart, addItemToCart, emptyCart } from "../controllers/cart.js";
 
 const router = express.Router();
 
 /*READ*/
-router.get("/:id", getCart);
+router.get("/", getCart);
 
 /*CREATE*/
-router.post("/:id", addNewPicToCart);
+router.post("/", addItemToCart);
 
-/*update*/
-router.patch("/:id/quantity", quantityPictures);
+/*DELETE*/
+router.delete("/empty-cart", emptyCart);
 
 export default router;
