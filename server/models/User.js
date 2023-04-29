@@ -38,8 +38,7 @@ const userSchema = new mongoose.Schema(
       // required: true,
     },
     subscription: {
-      type: Map,
-      of: Boolean,
+      type: Boolean,
     },
     admin: {
       type: Boolean,

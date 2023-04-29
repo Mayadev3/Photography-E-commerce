@@ -8,19 +8,12 @@ const PictureSchema = new mongoose.Schema(
     story: {
       type: String,
     },
-    description: {
-      type: String,
-    },
-    price: {
-      type: Number,
-    },
-    likes: {
-      type: Map,
-      of: Boolean,
-    },
     picturePath: {
       type: String,
       default: "",
+    },
+    likes: {
+      type: Number,
     },
   },
   { timestamps: true }

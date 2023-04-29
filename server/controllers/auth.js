@@ -9,27 +9,17 @@ export const register = async (req, res) => {
   //third insert all the info the user registered with into the database after hashing the password
   try {
     //those are the values the client sends
-    const {
-      firstName,
-      lastName,
-      email,
-      password,
-      userPicturePath,
-      productId,
-      location,
-    } = req.body;
+    const { firstName, lastName, email, city, address, phoneNumber, zipCode } =
+      req.body;
 
-    const salt = await bcrypt.genSalt();
-    const passwordHash = await bcrypt.hash(password, salt);
     //here i am creating a new user in the User table in the model file..those are the columns of the table and the whole process in the backend
     const newUser = new User({
-      firstName,
-      lastName,
-      email,
-      password: passwordHash,
-      userPicturePath,
-      productId,
-      location,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      city: req.body.city,
+      address: req.body.address,
+      zipCode: req.body.zipCode,
     });
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
