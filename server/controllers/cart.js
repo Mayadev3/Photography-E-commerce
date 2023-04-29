@@ -5,6 +5,7 @@ import Picture from "../models/Picture.js";
 
 //all cart logic is here
 
+//here is the link that explains populate: https://masteringjs.io/tutorials/mongoose/create
 //here we need to define what we want to populate the cart with since it is a one to many
 const cartItems = async () => {
   //this retrieves all the documents from within the cart collection ending up with an array of cart documents
