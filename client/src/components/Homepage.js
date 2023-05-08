@@ -14,7 +14,8 @@ export default function Homepage() {
       if (response.ok) {
         let data = await response.json();
         setPictures(data);
-        console.log(data);
+      } else {
+        console.log(`Server error: ${response.status} ${response.statusText}`);
       }
     } catch (err) {
       console.log(`Network error: ${err.message}`);

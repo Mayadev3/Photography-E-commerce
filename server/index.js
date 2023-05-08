@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-// import multer from "multer";
+import multer from "multer";
 import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
@@ -31,21 +31,21 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
-
+// app.use(express.static("public/assets"));
 /*FILE STORAGE*/
-//taken from multer github repo inside the ReadMe
-//destination is that each time a user uploads a picture it will go to the public/assets folder
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, "public/assets");
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, file.originalname);
-//   },
-// });
+// taken from multer github repo inside the ReadMe
+// destination is that each time a user uploads a picture it will go to the public/assets folder
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "public/assets");
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
+});
 
 // //each time we want to upload a file we will use the upload variable on line 39
-// const upload = multer({ storage });
+const upload = multer({ storage });
 
 /* ROUTES WITH FILES*/
 // app.post("/auth/register", upload.single("Picture"), register);
@@ -69,6 +69,6 @@ mongoose
     /*ADD DATA ONE TIME*/
 
     // User.insertMany(users);
-    Picture.insertMany(pictures);
+    // Picture.insertMany(pictures);
   })
   .catch((error) => console.log(`${error} did not connect`));

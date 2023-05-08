@@ -1,5 +1,6 @@
 import Homepage from "./components/Homepage";
 import Bars from "./components/Bars";
+import Carousel from "./components/Carousel";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
@@ -9,6 +10,8 @@ function App() {
     <div className="App">
       <Bars />
       <Homepage />
+
+      <Carousel />
     </div>
   );
 }
@@ -44,4 +47,17 @@ export default App;
 //       </div>
 //     </div>
 //   );
+// }
+
+// {
+//   pictures.map((picture) => (
+//     <div>
+//       <h4>{picture.title}</h4>
+//       <img
+//         src={`http://localhost:3003/assets/${picture.imagePath}`}
+//         alt={picture.title}
+//       />
+//       <p>{picture.story}</p>
+//     </div>
+//   ));
 // }

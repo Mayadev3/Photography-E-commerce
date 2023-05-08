@@ -81,8 +81,7 @@ export const patchUniquePicture = async (req, res) => {
         title: req.body.title,
         story: req.body.story,
         price: req.body.price,
-        likes: req.body.likes,
-        picturePath: req.body.picturePath,
+        imagePath: req.body.imagePath,
       },
       { new: true }
     );
