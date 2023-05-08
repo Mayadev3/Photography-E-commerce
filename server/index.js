@@ -3,17 +3,17 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import multer from "multer";
+// import multer from "multer";
 import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
-import { register } from "./controllers/auth.js";
+// import { register } from "./controllers/auth.js";
 import { addPicture } from "./controllers/picture.js";
-import authRoutes from "./routes/auth.js";
+// import authRoutes from "./routes/auth.js";
 import pictureRoutes from "./routes/picture.js";
 import cartRoutes from "./routes/cart.js";
-import User from "./models/User.js";
+// import User from "./models/User.js";
 import Picture from "./models/Picture.js";
 import Cart from "./models/Cart.js";
 import { pictures } from "./data/index.js";
@@ -35,24 +35,23 @@ app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 /*FILE STORAGE*/
 //taken from multer github repo inside the ReadMe
 //destination is that each time a user uploads a picture it will go to the public/assets folder
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "public/assets");
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "public/assets");
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, file.originalname);
+//   },
+// });
 
-//each time we want to upload a file we will use the upload variable on line 39
-const upload = multer({ storage });
+// //each time we want to upload a file we will use the upload variable on line 39
+// const upload = multer({ storage });
 
 /* ROUTES WITH FILES*/
-app.post("/auth/register", upload.single("Picture"), register);
-app.post("/pictures", upload.single("Picture"), addPicture);
+// app.post("/auth/register", upload.single("Picture"), register);
 
 /*ROUTES*/
-app.use("/auth", authRoutes);
+// app.use("/auth", authRoutes);
 app.use("/pictures", pictureRoutes);
 app.use("/cart", cartRoutes);
 
@@ -70,6 +69,6 @@ mongoose
     /*ADD DATA ONE TIME*/
 
     // User.insertMany(users);
-    // Picture.insertMany(pictures);
+    Picture.insertMany(pictures);
   })
   .catch((error) => console.log(`${error} did not connect`));

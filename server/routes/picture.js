@@ -3,6 +3,7 @@ import {
   getPictures,
   patchUniquePicture,
   getUniquePicture,
+  addPicture,
   addNewPicToCart,
   deletePicture,
 } from "../controllers/picture.js";
@@ -14,7 +15,7 @@ router.get("/", getPictures);
 router.get("/:id", getUniquePicture);
 
 /*CREATE*/
-//addPicture was put in the index.js cause multer is there
+router.post("/", addPicture);
 
 /*CREATE*/
 router.post("/:id", addNewPicToCart);

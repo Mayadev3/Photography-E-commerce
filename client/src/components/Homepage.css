@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.Homepage .about-samia {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: left;
+  width: 70vw;
+  margin: 30px auto;
+  gap: 80px;
+}
+.Homepage .about-samia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1.13;
+  border-radius: 18px;
+}
+.samia-info {
+  padding: 10px;
+}
+.title {
+  font-family: "Permanent Marker", cursive;
+  width: 60%;
+  margin-left: 40px;
+  margin-top: 23px;
+  font-size: 21px;
+}
+.about {
+  font-family: "Poppins", sans-serif;
+  margin-top: 40px;
+  width: 90%;
+  line-height: 1.8;
+  font-size: 17px;
+}

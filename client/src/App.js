@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import Homepage from "./components/Homepage";
+import Bars from "./components/Bars";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Bars />
+      <Homepage />
     </div>
   );
 }
 
 export default App;
+
+// import React, { useEffect, useState, useRef } from "react";
+// import "./Navbar.css";
+
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
+// export default function Navbar() {
+//   return (
+//     <div className="Navbar">
+//       <h2 className="logo">Samia Alamgir</h2>
+//       <div className="navbar-links">
+//         <div className="nav-links-1">
+//           <p>Homage To Praha</p>
+//           <br />
+//           <p className="dear">Dear Lonely City</p>
+//         </div>
+//         <div className="nav-links-2">
+//           <p>Diasphora</p>
+//           <br />
+//           <p className="diaspora">City Tales</p>
+//         </div>
+//         <div>
+//           <FontAwesomeIcon icon={faInstagram} className="insta-icon" />
+//           <FontAwesomeIcon icon={faShoppingCart} />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }

@@ -12,11 +12,11 @@ const ItemSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
-    // required: true,
+    required: true,
   },
   total: {
     type: Number,
-    // required: true,
+    required: true,
   },
 });
 const CartSchema = new mongoose.Schema(

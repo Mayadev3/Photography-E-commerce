@@ -1,6 +1,8 @@
 import Picture from "../models/Picture.js";
-import User from "../models/User.js";
+// import User from "../models/User.js";
 import Cart from "../models/Cart.js";
+
+//great website for mongoose functions: https://www.geeksforgeeks.org/mongoose-findoneanddelete-function/
 
 /*READ*/
 
@@ -38,9 +40,7 @@ export const addPicture = async (req, res) => {
     newPicture.story = req.body.story;
     newPicture.description = req.body.description;
     newPicture.price = req.body.price;
-    newPicture.likes = req.body.likes;
-    newPicture.picturePath = req.body.picturePath;
-    newPicture.comments = req.body.comments;
+    newPicture.imagePath = req.body.imagePath;
 
     await newPicture.save();
 

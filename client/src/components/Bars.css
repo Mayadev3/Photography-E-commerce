@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@200&family=Special+Elite&display=swap");
+
+.navbar-brand {
+  font-size: 33px !important;
+}
+
+.insta-icon {
+  font-size: 30px;
+}
+.navbar {
+  background-color: white !important;
+}
+.navbar-nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar-nav a {
+  font-family: "Special Elite", cursive;
+  font-size: 20px;
+}
+.insta-cart {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-icon {
+  font-size: 23px;
+}
