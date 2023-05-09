@@ -9,14 +9,16 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 // import { register } from "./controllers/auth.js";
-import { addPicture } from "./controllers/picture.js";
+// import { addPicture } from "./controllers/picture.js";
 // import authRoutes from "./routes/auth.js";
 import pictureRoutes from "./routes/picture.js";
 import cartRoutes from "./routes/cart.js";
+import lonelyRoutes from "./routes/lonely.js";
 // import User from "./models/User.js";
-import Picture from "./models/Picture.js";
-import Cart from "./models/Cart.js";
-import { pictures } from "./data/index.js";
+// import Picture from "./models/Picture.js";
+// import Cart from "./models/Cart.js";
+// import { pictures } from "./data/index.js";
+// import Lonely from "./models/Lonely.js";
 
 /*CONFIGURATIONS*/
 const __filename = fileURLToPath(import.meta.url);
@@ -54,6 +56,7 @@ const upload = multer({ storage });
 // app.use("/auth", authRoutes);
 app.use("/pictures", pictureRoutes);
 app.use("/cart", cartRoutes);
+app.use("/lonely", lonelyRoutes);
 
 /*MONGOOSE SETUP*/
 const PORT = process.env.PORT || 6001;
@@ -70,5 +73,6 @@ mongoose
 
     // User.insertMany(users);
     // Picture.insertMany(pictures);
+    // Lonely.insertMany(lonely);
   })
   .catch((error) => console.log(`${error} did not connect`));

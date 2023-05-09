@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@200&family=Special+Elite&display=swap");
 
 * {
   padding: 0;
@@ -36,4 +36,19 @@
   width: 90%;
   line-height: 1.8;
   font-size: 17px;
+}
+.subscribe-button {
+  border: none;
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  font-family: "Special Elite", cursive;
+  font-size: 19px;
+}
+.subscribe-button:hover {
+  background-color: #1e1e1e29;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  transition: all 0.7s ease;
 }
