@@ -25,7 +25,7 @@ export default function LonelyCarousel() {
   };
 
   return (
-    <div className="LonelyCarousel">
+    <div className="LonelyCarousel" id="lonely">
       {" "}
       <div className="lonely-grid-carousel">
         <div className="lonely-beautiful-writing">

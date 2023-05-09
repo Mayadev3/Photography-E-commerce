@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from "react";
+import { Routes, Route, NavLink, Link } from "react-router-dom";
 import "./Bars.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 export default function Bars() {
+  const scrollToCarousel = () => {
+    const carouselSection = document.getElementById("praha");
+    carouselSection.scrollIntoView();
+  };
+
+  const scrollToLonely = () => {
+    const lonelySection = document.getElementById("lonely");
+    lonelySection.scrollIntoView();
+  };
+
   return (
     <div className="Bars">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand logo" href="#">
+          <NavLink to="/" className="navbar-brand logo">
             Samia Alamgir
-          </a>
+          </NavLink>
           <button
             class="navbar-toggler"
             type="button"
@@ -25,15 +36,27 @@ export default function Bars() {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">
+              <NavLink
+                className="nav-link active"
+                aria-current="page"
+                to="/"
+                onClick={scrollToCarousel}
+              >
                 Homage To Praha
-              </a>
-              <a class="nav-link" href="#">
+              </NavLink>
+              <a className="nav-link" href="#">
                 City Tales
               </a>
-              <a class="nav-link" href="#">
+              <NavLink
+                className="nav-link active"
+                aria-current="page"
+                to="/"
+                onClick={scrollToLonely}
+              >
+                {" "}
                 Dear Lonely City
-              </a>
+              </NavLink>
+
               <a class="nav-link" href="#">
                 Diaspora
               </a>

@@ -2,6 +2,8 @@ import Homepage from "./components/Homepage";
 import Bars from "./components/Bars";
 import Carousel from "./components/Carousel";
 import LonelyCarousel from "./components/LonelyCarousel";
+import { Routes, Route, NavLink } from "react-router-dom";
+import Cart from "./components/Cart.js";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
@@ -9,6 +11,9 @@ import React, { useEffect, useState } from "react";
 function App() {
   return (
     <div className="App">
+      <Routes>
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <Bars />
       <Homepage />
       <Carousel />

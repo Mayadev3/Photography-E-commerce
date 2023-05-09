@@ -16,7 +16,7 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.navbar-nav a {
+.navbar-nav .nav-link {
   font-family: "Special Elite", cursive;
   font-size: 20px;
 }

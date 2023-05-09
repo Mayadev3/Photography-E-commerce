@@ -27,7 +27,7 @@ export default function Carousel() {
   return (
     <div className="Carousel">
       <h3>Stories</h3>
-      <div className="grid-carousel">
+      <div className="grid-carousel" id="praha">
         <div
           id="carouselExampleCaptions"
           className="carousel slide container"
