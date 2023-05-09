@@ -1,6 +1,7 @@
 import Homepage from "./components/Homepage";
 import Bars from "./components/Bars";
 import Carousel from "./components/Carousel";
+import LonelyCarousel from "./components/LonelyCarousel";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
@@ -10,8 +11,8 @@ function App() {
     <div className="App">
       <Bars />
       <Homepage />
-
       <Carousel />
+      <LonelyCarousel />
     </div>
   );
 }

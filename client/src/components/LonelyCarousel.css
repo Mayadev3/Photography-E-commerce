@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@200&family=Special+Elite&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.inner-carousel-title {
+  font-size: 27px;
+}
+.lonely-carousel-description {
+  text-align: center;
+  font-family: "Special Elite", cursive;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.lonely-grid-carousel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 70px;
+}
+.container {
+  width: 40vw !important;
+  margin-bottom: 60px;
+}
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 7px;
+}
+
+.cart-button {
+  padding: 8px 6px;
+  width: 130px;
+  border: none;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.cart-button:hover {
+  box-shadow: rgb(216, 209, 209) 1px 7px 29px 1px;
+}
+.cart-icon-button {
+  margin-right: 5px;
+  font-size: 13px;
+}
+.lonely-beautiful-writing {
+  width: 80%;
+  line-height: 1.8;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  margin-left: 60px;
+  margin-top: 40px;
+}

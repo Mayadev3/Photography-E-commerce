@@ -15,10 +15,11 @@ import pictureRoutes from "./routes/picture.js";
 import cartRoutes from "./routes/cart.js";
 import lonelyRoutes from "./routes/lonely.js";
 // import User from "./models/User.js";
-// import Picture from "./models/Picture.js";
-// import Cart from "./models/Cart.js";
-// import { pictures } from "./data/index.js";
-// import Lonely from "./models/Lonely.js";
+import Picture from "./models/Picture.js";
+import Cart from "./models/Cart.js";
+import { pictures } from "./data/index.js";
+import Lonely from "./models/Lonely.js";
+import { lonely } from "./data/index.js";
 
 /*CONFIGURATIONS*/
 const __filename = fileURLToPath(import.meta.url);

@@ -125,15 +125,4 @@ export const lonely = [
     updatedAt: 1115211422,
     __v: 0,
   },
-  {
-    _id: lonelyIds[5],
-    title: "Ready Player One",
-    story: "Down around and in between",
-    description: "Amazing wall paper",
-    price: 60,
-    imagePath: "lonely-6.jpeg",
-    createdAt: 1115211422,
-    updatedAt: 1115211422,
-    __v: 0,
-  },
 ];
