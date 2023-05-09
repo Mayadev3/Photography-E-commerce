@@ -61,8 +61,21 @@ export default function Bars() {
                 Diaspora
               </a>
               <div className="insta-cart">
-                <FontAwesomeIcon icon={faInstagram} className="insta-icon" />
-                <FontAwesomeIcon icon={faShoppingCart} className="cart-icon" />
+                <a
+                  href="https://www.instagram.com/samia_alamgiir/"
+                  target="_blank"
+                  className="insta"
+                >
+                  {" "}
+                  <FontAwesomeIcon icon={faInstagram} className="insta-icon" />
+                </a>
+
+                <NavLink to="/cart" className="nav-link">
+                  <FontAwesomeIcon
+                    icon={faShoppingCart}
+                    className="cart-icon"
+                  />
+                </NavLink>
               </div>
             </div>
           </div>

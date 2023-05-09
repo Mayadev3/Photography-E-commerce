@@ -2,9 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./Carousel.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import Cart from "./Cart.js";
 
 export default function Carousel() {
   const [pictures, setPictures] = useState([]);
+
+  // const [cart, setCart] = useState([]);
+
+  //ADD PICTURE TO CART
+  // const addToCart = (id) => {
+  //   let toAdd = pictures.find((picture) => picture.id === id);
+  //   let newCart = [...cart];
+
+  //   newCart.push(toAdd);
+  //   setCart(newCart);
+  // };
 
   useEffect(() => {
     allPics();
@@ -63,7 +75,10 @@ export default function Carousel() {
                   <strong>
                     <p style={{ color: "yellow" }}>Price: {picture.price}€</p>
                   </strong>
-                  <button className="cart-button">
+                  <button
+                    className="cart-button"
+                    onClick={(id) => addToCart(id)}
+                  >
                     {" "}
                     <FontAwesomeIcon
                       icon={faShoppingCart}

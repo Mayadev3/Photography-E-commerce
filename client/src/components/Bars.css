@@ -4,9 +4,6 @@
   font-size: 33px !important;
 }
 
-.insta-icon {
-  font-size: 30px;
-}
 .navbar {
   background-color: white !important;
 }
@@ -26,6 +23,20 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.insta-icon,
+.cart-icon {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
 .cart-icon {
   font-size: 23px;
+}
+
+.cart-icon:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(217, 11, 169));
+}
+.insta-icon:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(217, 11, 169));
 }
