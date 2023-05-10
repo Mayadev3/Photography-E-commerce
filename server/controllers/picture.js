@@ -73,8 +73,6 @@ export const patchUniquePicture = async (req, res) => {
   try {
     const { id } = req.params;
 
-    // const picture = await Picture.findById(id);
-
     const updatedPicture = await Picture.findByIdAndUpdate(
       id,
       {

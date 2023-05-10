@@ -11,15 +11,15 @@ import { fileURLToPath } from "url";
 // import { register } from "./controllers/auth.js";
 // import { addPicture } from "./controllers/picture.js";
 // import authRoutes from "./routes/auth.js";
-import pictureRoutes from "./routes/picture.js";
-import cartRoutes from "./routes/cart.js";
-import lonelyRoutes from "./routes/lonely.js";
+// import cartRoutes from "./routes/cart.js";
 // import User from "./models/User.js";
+// import Cart from "./models/Cart.js";
+import pictureRoutes from "./routes/picture.js";
 import Picture from "./models/Picture.js";
-import Cart from "./models/Cart.js";
 import { pictures } from "./data/index.js";
-import Lonely from "./models/Lonely.js";
-import { lonely } from "./data/index.js";
+import Categories from "./models/Categories.js";
+import { categories } from "./data/index.js";
+import categoryRoutes from "./routes/category.js";
 
 /*CONFIGURATIONS*/
 const __filename = fileURLToPath(import.meta.url);
@@ -56,8 +56,8 @@ const upload = multer({ storage });
 /*ROUTES*/
 // app.use("/auth", authRoutes);
 app.use("/pictures", pictureRoutes);
-app.use("/cart", cartRoutes);
-app.use("/lonely", lonelyRoutes);
+app.use("/category", categoryRoutes);
+// app.use("/cart", cartRoutes);
 
 /*MONGOOSE SETUP*/
 const PORT = process.env.PORT || 6001;
@@ -74,6 +74,6 @@ mongoose
 
     // User.insertMany(users);
     // Picture.insertMany(pictures);
-    // Lonely.insertMany(lonely);
+    // Categories.insertMany(categories);
   })
   .catch((error) => console.log(`${error} did not connect`));

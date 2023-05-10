@@ -75,10 +75,7 @@ export default function Carousel() {
                   <strong>
                     <p style={{ color: "yellow" }}>Price: {picture.price}€</p>
                   </strong>
-                  <button
-                    className="cart-button"
-                    onClick={(id) => addToCart(id)}
-                  >
+                  <button className="cart-button">
                     {" "}
                     <FontAwesomeIcon
                       icon={faShoppingCart}
