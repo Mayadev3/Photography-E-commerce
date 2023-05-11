@@ -148,17 +148,6 @@ export const pictures = [
     updatedAt: 1115211422,
     __v: 0,
   },
-  {
-    _id: pictureIds[12],
-    title: "Cityy",
-    story: "See",
-    description: "Amazing wall paper",
-    price: 35,
-    imagePath: "city-1.jpeg",
-    createdAt: 1115211422,
-    updatedAt: 1115211422,
-    __v: 0,
-  },
 ];
 
 export const categories = [
@@ -185,7 +174,6 @@ export const categories = [
       pictureIds[9],
       pictureIds[10],
       pictureIds[11],
-      pictureIds[12],
     ],
     createdAt: 1115211422,
     updatedAt: 1115211422,

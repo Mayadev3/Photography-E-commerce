@@ -26,6 +26,6 @@ router.patch("/:id", patchCategory);
 
 /*DELETE*/
 router.delete("/:name", deleteCategory);
-router.delete("/:name/picture/:id", deletePicture);
+router.delete("/:name/pictures/:id", deletePicture);
 
 export default router;

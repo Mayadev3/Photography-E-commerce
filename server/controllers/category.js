@@ -66,7 +66,7 @@ export const addPicToCategory = async (req, res) => {
     const { name, id } = req.params;
 
     const getPicture = await Picture.findById(id);
-    const getCategory = await Category.findOne({ name: name });
+    const getCategory = await Categories.findOne({ name: name });
 
     if (!getPicture || !getCategory) {
       return res.status(404).json({ error: "Picture or category not found" });
