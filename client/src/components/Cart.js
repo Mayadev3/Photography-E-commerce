@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Bars from "./Bars.js";
+import NavBar from "./NavBar.js";
 
 // const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
@@ -12,7 +12,7 @@ export default function Cart() {
 
   return (
     <div className="Cart">
-      <Bars />
+      <NavBar />
       Hello from Cart
     </div>
   );

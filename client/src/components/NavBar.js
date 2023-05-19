@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, NavLink, Link } from "react-router-dom";
-import "./Bars.css";
+import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-export default function Bars() {
+export default function NavBar() {
   const scrollToCarousel = () => {
     const carouselSection = document.getElementById("praha");
     carouselSection.scrollIntoView();
@@ -17,7 +17,7 @@ export default function Bars() {
   };
 
   return (
-    <div className="Bars">
+    <div className="NavBar">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <NavLink to="/" className="navbar-brand logo">

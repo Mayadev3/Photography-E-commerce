@@ -49,7 +49,9 @@ export default function Homepage() {
               Besides being a photographer, I am also an Erasmus scholar of
               European Politics and Society.
             </p>
-            <button className="subscribe-button">Subscribe To Stories</button>
+            <div className="sub-button">
+              <button className="subscribe-button">Subscribe To Stories</button>
+            </div>
           </div>
         </div>
       ))}

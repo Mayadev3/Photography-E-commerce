@@ -1,5 +1,5 @@
 import Homepage from "./components/Homepage";
-import Bars from "./components/Bars";
+import NavBar from "./components/NavBar.js";
 import PrahaCarousel from "./components/PrahaCarousel";
 import LonelyCarousel from "./components/LonelyCarousel";
 import { Routes, Route, NavLink } from "react-router-dom";
@@ -23,7 +23,7 @@ function App() {
 function Home() {
   return (
     <div className="Home">
-      <Bars />
+      <NavBar />
       <Homepage />
       <PrahaCarousel />
       <LonelyCarousel />
