@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./Carousel.css";
+import "./PrahaCarousel.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import Cart from "./Cart.js";
 
-export default function Carousel() {
-  const [pictures, setPictures] = useState([]);
+export default function PrahaCarousel() {
+  const [prahaPics, setPrahaPics] = useState([]);
 
   // const [cart, setCart] = useState([]);
 
@@ -24,10 +24,12 @@ export default function Carousel() {
 
   async function allPics() {
     try {
-      let response = await fetch("http://localhost:3003/pictures");
+      let response = await fetch(
+        "http://localhost:3003/category/categoryPraha/pictures"
+      );
       if (response.ok) {
         let data = await response.json();
-        setPictures(data);
+        setPrahaPics(data);
       } else {
         console.log(`Server error: ${response.status} ${response.statusText}`);
       }
@@ -46,7 +48,7 @@ export default function Carousel() {
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators">
-            {pictures.map((picture, index) => (
+            {prahaPics.map((picture, index) => (
               <button
                 key={picture._id}
                 type="button"
@@ -59,7 +61,7 @@ export default function Carousel() {
             ))}
           </div>
           <div className="carousel-inner">
-            {pictures.map((picture, index) => (
+            {prahaPics.map((picture, index) => (
               <div
                 key={picture._id}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}

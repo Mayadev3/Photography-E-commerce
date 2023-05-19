@@ -17,7 +17,7 @@ const pictureIds = [
 
 export const pictures = [
   {
-    _id: pictureIds[0],
+    _id: "1P",
     title: "Birds in the City",
     story: "Migrations",
     description: "taken with phone camera and size to be sold in",
@@ -28,7 +28,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[1],
+    _id: "2P",
     title: "Vintage Cars overloard",
     story: "Big lights",
     description: "Amazing wall paper",
@@ -39,7 +39,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[2],
+    _id: "3P",
     title: "Man on a bean",
     story: "Educate",
     description: "Amazing wall paper",
@@ -50,7 +50,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[3],
+    _id: "4P",
     title: "Clean and Skate",
     story: "Up",
     description: "Amazing wall paper",
@@ -61,7 +61,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[4],
+    _id: "5P",
     title: "Hidden Time Machine",
     story: "Forward",
     description: "Amazing wall paper",
@@ -72,7 +72,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[5],
+    _id: "6P",
     title: "Copy here little one",
     story: "Closer",
     description: "Amazing wall paper",
@@ -83,7 +83,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[6],
+    _id: "1L",
     title: "Back to the Future",
     story: "Closer",
     description: "Amazing wall paper",
@@ -94,7 +94,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[7],
+    _id: "2L",
     title: "Paint me a Family",
     story: "Loneliness",
     description: "Amazing wall paper",
@@ -105,7 +105,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[8],
+    _id: "3L",
     title: "Read till my last breath",
     story: "Forever",
     description: "Amazing wall paper",
@@ -116,7 +116,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[9],
+    _id: "4L",
     title: "Nostalgia Gentleman",
     story: "Philosophical",
     description: "Amazing wall paper",
@@ -127,7 +127,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[10],
+    _id: "5L",
     title: "Church bells ring",
     story: "Heavens",
     description: "Amazing wall paper",
@@ -138,7 +138,7 @@ export const pictures = [
     __v: 0,
   },
   {
-    _id: pictureIds[11],
+    _id: "6L",
     title: "Curious Future",
     story: "See",
     description: "Amazing wall paper",
@@ -150,31 +150,25 @@ export const pictures = [
   },
 ];
 
+const categoryIds = [
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+  new mongoose.Types.ObjectId(),
+];
+
 export const categories = [
   {
+    _id: categoryIds[0],
     name: "categoryPraha",
-    pictures: [
-      pictureIds[0],
-      pictureIds[1],
-      pictureIds[2],
-      pictureIds[3],
-      pictureIds[4],
-      pictureIds[5],
-    ],
+    pictures: ["1P", "2P", "3P", "4P", "5P", "6P"],
     createdAt: 1115211422,
     updatedAt: 1115211422,
     __v: 0,
   },
   {
+    _id: categoryIds[1],
     name: "categoryLonely",
-    pictures: [
-      pictureIds[6],
-      pictureIds[7],
-      pictureIds[8],
-      pictureIds[9],
-      pictureIds[10],
-      pictureIds[11],
-    ],
+    pictures: ["1L", "2L", "3L", "4L", "5L", "6L"],
     createdAt: 1115211422,
     updatedAt: 1115211422,
     __v: 0,

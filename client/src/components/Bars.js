@@ -57,7 +57,7 @@ export default function Bars() {
                 Dear Lonely City
               </NavLink>
 
-              <a class="nav-link" href="#">
+              <a className="nav-link" href="#">
                 Diaspora
               </a>
               <div className="insta-cart">

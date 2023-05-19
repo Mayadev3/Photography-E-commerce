@@ -6,7 +6,12 @@ const CategoriesSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    pictures: [{ type: mongoose.Schema.Types.ObjectId, ref: "Picture" }],
+    pictures: [
+      {
+        type: String,
+        ref: "Picture",
+      },
+    ],
   },
   { timestamps: true }
 );

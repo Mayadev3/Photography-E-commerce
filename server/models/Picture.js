@@ -2,6 +2,9 @@ import mongoose from "mongoose";
 
 const PictureSchema = new mongoose.Schema(
   {
+    _id: {
+      type: String,
+    },
     title: {
       type: String,
     },
