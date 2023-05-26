@@ -20,11 +20,22 @@
   "type": "module",
   "_comment": " in line 20 to use import instead of require",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "_comment": "in line 10 to use npm start for server and not nodemon index.js to start sever"
+    "_comment": "in line 10 to use npm start for server and not nodemon index.js to start sever",
+    "test": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  }
 }

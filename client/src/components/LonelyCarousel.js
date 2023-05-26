@@ -62,7 +62,9 @@ export default function LonelyCarousel() {
                   <h5 className="inner-carousel-title">{picture.title}</h5>
                   <p>{picture.story}</p>
                   <strong>
-                    <p style={{ color: "yellow" }}>Price: {picture.price}€</p>
+                    <p className="price" style={{ color: "yellow" }}>
+                      Price: {picture.price}€
+                    </p>
                   </strong>
                   <button className="cart-button">
                     {" "}

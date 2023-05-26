@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import NavBar from "./NavBar.js";
-
-// const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
+import PrahaContext from "./PrahaContext.js";
 
 export default function Cart() {
-  // const [cart, setCart] = useState([]);
-
-  // useEffect(() => {
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  // }, [cart]);
+  let prahaStuff = useContext(PrahaContext);
+  console.log(prahaStuff);
 
   return (
     <div className="Cart">

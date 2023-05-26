@@ -54,7 +54,85 @@
 .lonely-beautiful-writing {
   width: 80%;
   line-height: 1.8;
-  font-size: 17px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
   margin-top: 30px;
+}
+
+/*Media Queries*/
+
+@media (min-width: 360px) and (max-width: 550px) {
+  .lonely-grid-carousel {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    margin: 10px auto;
+  }
+  #carouselExampleCaptions {
+    margin: 0 auto;
+    text-align: center;
+    width: 100% !important;
+    padding: 20px;
+  }
+  .lonely-beautiful-writing {
+    margin: 0 auto;
+    width: 83%;
+    text-align: left;
+  }
+  .lonely-carousel-description {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .lonely-p {
+    font-size: 15px;
+  }
+  .inner-carousel-title {
+    font-size: 13px !important;
+  }
+  .price {
+    font-size: 12px !important;
+  }
+  .cart-button {
+    font-size: 10px;
+    width: 100px !important;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 1280px) {
+  .lonely-grid-carousel {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    margin: 10px auto;
+  }
+  #carouselExampleCaptions {
+    margin: 0 auto;
+    text-align: center;
+    width: 100% !important;
+    padding: 20px;
+  }
+  .lonely-beautiful-writing {
+    margin: 0 auto;
+    width: 83%;
+    text-align: left;
+  }
+  .lonely-carousel-description {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .lonely-p {
+    font-size: 20px;
+  }
+  .inner-carousel-title {
+    font-size: 13px !important;
+  }
+  .price {
+    font-size: 12px !important;
+  }
+  .cart-button {
+    font-size: 10px;
+    width: 100px !important;
+  }
 }

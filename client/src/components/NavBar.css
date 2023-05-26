@@ -15,7 +15,7 @@
 }
 .navbar-nav .nav-link {
   font-family: "Special Elite", cursive;
-  font-size: 20px;
+  font-size: 22px;
 }
 .insta-cart {
   width: 100px;
@@ -39,4 +39,42 @@
 }
 .insta-icon:hover {
   filter: drop-shadow(0 0 0.75rem rgb(217, 11, 169));
+}
+
+@media (min-width: 360px) and (max-width: 550px) {
+  .logo {
+    font-size: 23px !important;
+  }
+  .navbar-nav .nav-link {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 912px) {
+  .navbar-nav .nav-link {
+    font-size: 27px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .logo {
+    font-size: 23px !important;
+  }
+  .navbar-nav .nav-link {
+    font-size: 17px !important;
+  }
+  .insta-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 15%;
+    gap: 20px;
+  }
+  .insta-icon,
+  .cart-icon {
+    font-size: 24px;
+  }
+  .cart-icon {
+    margin-top: 5px;
+  }
 }

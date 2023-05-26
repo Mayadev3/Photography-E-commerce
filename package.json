@@ -6,9 +6,9 @@
   "type": "module",
   "_comment": " in line 6 to use import instead of require",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "_comment": "in line 10 to use npm start for server and not nodemon index.js to start sever"
+    "_comment": "in line 10 to use npm start for server and not nodemon index.js to start sever",
+    "test": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,9 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-router-dom": "^6.11.1"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
   }
 }

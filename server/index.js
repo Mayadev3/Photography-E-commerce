@@ -50,6 +50,9 @@ const storage = multer.diskStorage({
 // //each time we want to upload a file we will use the upload variable on line 39
 const upload = multer({ storage });
 
+app.get("/", function (req, res) {
+  res.send("hello from express");
+});
 /* ROUTES WITH FILES*/
 // app.post("/auth/register", upload.single("Picture"), register);
 

@@ -2,21 +2,32 @@ import React, { useEffect, useState } from "react";
 import "./PrahaCarousel.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import "./PrahaContext.js";
+import PrahaContext from "./PrahaContext.js";
 import Cart from "./Cart.js";
+
+//the fall back is an empty array cause the new user usually doesnt have anything in local storage
+//it is so the new user has an empty array ready for him in local storage to be filled up
+let cartFromLocal = JSON.parse(localStorage.getItem("cart") || "[]");
 
 export default function PrahaCarousel() {
   const [prahaPics, setPrahaPics] = useState([]);
+  const [prahaCart, setprahaCart] = useState(cartFromLocal);
 
-  // const [cart, setCart] = useState([]);
+  const addToCart = (id) => {
+    let findPicture = prahaPics.find((picture) => picture._id === id);
+    let copyCart = [...prahaCart];
+    if (copyCart.includes(findPicture)) {
+      copyCart.slice();
+    } else {
+      copyCart.push(findPicture);
+      setprahaCart((prahaCart) => copyCart);
+    }
+  };
 
-  //ADD PICTURE TO CART
-  // const addToCart = (id) => {
-  //   let toAdd = pictures.find((picture) => picture.id === id);
-  //   let newCart = [...cart];
-
-  //   newCart.push(toAdd);
-  //   setCart(newCart);
-  // };
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(prahaCart));
+  }, [prahaCart]);
 
   useEffect(() => {
     allPics();
@@ -75,9 +86,14 @@ export default function PrahaCarousel() {
                   <h5 className="inner-carousel-title">{picture.title}</h5>
                   <p>{picture.story}</p>
                   <strong>
-                    <p style={{ color: "yellow" }}>Price: {picture.price}€</p>
+                    <p className="price" style={{ color: "yellow" }}>
+                      Price: {picture.price}€
+                    </p>
                   </strong>
-                  <button className="cart-button">
+                  <button
+                    className="cart-button"
+                    onClick={() => addToCart(picture._id)}
+                  >
                     {" "}
                     <FontAwesomeIcon
                       icon={faShoppingCart}
